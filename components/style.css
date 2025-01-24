@@ -1,0 +1,492 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+  /* General Body Styling */
+  body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+
+  a{
+    text-decoration: none;
+  }
+  
+  /* Container Class */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* Navbar */
+  .navbar {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 1rem 2rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease; /* Smooth transition for background */
+  }
+  
+  /* Logo Styles */
+  .navbar .logo {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+  }
+  
+  /* Navbar Links Container */
+  .navbar .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    float: right;
+    gap: 1.5rem; /* Space between links */
+    align-items: center;
+    transition: transform 0.3s ease; /* Smooth transition for links */
+  }
+  
+  /* Navbar Links */
+  .navbar .nav-links li {
+    margin-left: 1.5rem;
+  }
+  
+  .navbar .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem 1.5rem;
+    border-radius: 8px; /* Rounded corners for the link */
+    transition: all 0.3s ease-in-out; /* Smooth transition for all properties */
+  }
+  
+  /* Hover Effects for Links */
+  .navbar .nav-links a:hover {
+    background-color: #ff4d4d; /* Soft red background */
+    color: #fff;
+    transform: scale(1.1); /* Slight zoom effect */
+    letter-spacing: 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+  }
+  
+  /* Navbar Background on Scroll */
+  .navbar.scrolled {
+    background-color: rgba(0, 0, 0, 1); /* Darker background when scrolled */
+  }
+  
+  /* Smooth Transition on Page Load */
+  .navbar,
+  .navbar .nav-links a {
+    opacity: 0;
+    animation: fadeIn 1.2s ease-out forwards; /* Fade-in effect */
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Scroll Animation to Change Navbar */
+  @keyframes scrollEffect {
+    0% {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    100% {
+      background-color: rgba(0, 0, 0, 1);
+    }
+  }
+  
+  /* Hero Section Styling */
+  .hero-section {
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://images.unsplash.com/photo-1492648272180-61e45a8d98a7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+    text-align: center;
+    overflow: hidden; /* To prevent overflow of content */
+  }
+  
+  /* Dark Overlay for Text Contrast */
+  .hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  }
+  
+  /* Hero Text Styling */
+  .hero-text {
+    font-size: 4rem;
+    font-weight: 800;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(227, 0, 0, 0.8);
+    animation: fadeInUp 1s ease-out;
+    z-index: 2;
+    margin: 0;
+  }
+  
+  /* Hero Tagline Text Styling */
+  .hero-tag-text {
+    font-size: 2.2rem;
+    color: white;
+    margin: 10px 0;
+    animation: fadeInUp 1.5s ease-out;
+    z-index: 2;
+  }
+  
+  /* Button Styling */
+  .btn-get-started {
+    padding: 15px 30px;
+    background-color: #ff5733;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    z-index: 2;
+    margin-top: 20px;
+  }
+  
+  .btn-get-started:hover {
+    background-color: #ff8c66;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Fade-in Up Animation */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Why Choose Us Section*/
+  .our-services {
+    padding: 4rem 1rem;
+    background: linear-gradient(rgba(255, 255, 255, 0.453), rgba(56, 81, 86, 255));
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white; /* Ensure text is readable on the image */
+    text-align: center;
+    position: relative;
+    animation: fadeIn 1s ease-out; /* Fade-in animation */
+  }
+  
+  /* Overlay for better text readability */
+  .wildlife-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    /* z-index: -1;  */
+  }
+  
+  section h2,
+  section .features-grid {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .services-h2 {
+    color: black;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+    animation: slideUp 1s ease-out; /* Animation to slide in */
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeIn 1.5s ease-out; /* Fade-in for the grid */
+  }
+  
+  .feature-card {
+    background: linear-gradient(rgba(255, 255, 255, 0.453), rgba(56, 81, 86, 255)); /* Slightly transparent background for contrast */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 5px solid #000000;
+    position: relative;
+    z-index: 2;
+    animation: fadeInUp 0.5s ease-out;
+    animation-fill-mode: both;
+  }
+  
+  /* Hover effects for feature card */
+  .feature-card:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3); /* Bigger shadow for hover effect */
+  }
+  
+  /* Hover effect for feature card icons */
+  .feature-card img {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .feature-card:hover img {
+    transform: scale(1.1); /* Slightly enlarge image on hover */
+  }
+  
+  /* Animation for fade-in effect */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Animation for slide-up effect */
+  @keyframes slideUp {
+    0% {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Wildlife Section with Solid Dark Background */
+  .wildlife-section {
+    padding: 4rem 2rem;
+    background-image: url("https://images.unsplash.com/photo-1492648272180-61e45a8d98a7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /* Solid dark background */
+    color: white;
+    position: relative;
+    overflow: hidden;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Vertical Text */
+  .vertical-text {
+    position: fixed;
+    right: 22px;
+    top: 42%;
+    transform: translateY(-50%);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 7px;
+    transition: color 0.3s ease, background 0.3s ease; /* Smooth transition */
+  }
+  
+  .vertical-text:hover {
+    color: transparent; /* Make the text transparent */
+    background: linear-gradient(to bottom, #ff0000, #00ff00, #0000ff, #ff00ff, #00ffff); /* Gradient with multiple colors */
+    background-clip: text; /* Clip the gradient to the text */
+    -webkit-background-clip: text; /* Webkit support for background-clip */
+    cursor: pointer;
+  }
+  
+  /* Wildlife Wrapper */
+  .wildlife-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+  }
+  
+  /* Main Content */
+  .wildlife-content {
+    max-width: 600px;
+    /* margin: 0 auto; */
+    position: relative;
+    z-index: 2;
+  }
+  
+  .wildlife-content h1 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+  
+  .wildlife-description {
+    color: #cccccc;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  
+  .wildlife-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 28px;
+    border: 1px solid #ffffff50;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    margin-top: 20px;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .wildlife-btn:hover {
+    background-color: #ffffff;
+    border-color: white;
+    color: black;
+  }
+  
+  /* Circular Animation */
+  .circular-container {
+    position: absolute;
+    top: -100px;
+    right: -140px;
+    width: 750px;
+    height: 530px;
+    z-index: 1;
+  }
+  
+  .circular-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: rotate 20s linear infinite;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Circular Image */
+  .wildlife-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .wildlife-image img {
+    width: 88%;
+    height: 90%;
+    object-fit: cover;
+  }
+  
+  /* Bottom Section */
+  .wildlife-bottom {
+    margin-top: 80px;
+    display: flex;
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Quote Section */
+  .wildlife-quote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 35px;
+    background-color: #000;
+    border-radius: 51px;
+    margin: 130px auto;
+    max-width: 600px;
+    /* z-index: 1; */
+  }
+  
+  .quote-image-container {
+    width: 250px;
+    height: 250px;
+    border-radius: 16%; /* Make the image circular */
+    overflow: hidden;
+    margin-bottom: 6px; /* Spacing below the image */
+  }
+  
+  .quote-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image is properly scaled */
+  }
+  
+  .quote-content {
+    padding: 0 20px;
+  }
+  
+  .quote-text {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .quote-author {
+    font-weight: 700;
+    margin-bottom: 4px;
+    font-size: 18px;
+    color: #ffffff;
+  }
+  
+  .quote-role {
+    color: #aaaaaa;
+    font-size: 14px;
+  }
+  
+  
