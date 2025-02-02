@@ -320,12 +320,12 @@ html {
     position: fixed;
     right: 22px;
     top: 42%;
-    transform: translateY(-50%);
+    transform: translateY(-40%);
     writing-mode: vertical-rl;
     text-orientation: mixed;
     color: #ffffff;
     font-size: 14px;
-    letter-spacing: 7px;
+    letter-spacing: 6px;
     transition: color 0.3s ease, background 0.3s ease; /* Smooth transition */
   }
   

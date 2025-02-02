@@ -83,7 +83,9 @@ a{text-decoration: none;}
 .services-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 3rem;
+    margin-top: 50px;
+    padding: 0px 45px 0px 45px;
 }
 
 .service-card {
